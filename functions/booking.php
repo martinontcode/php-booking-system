@@ -41,9 +41,9 @@ class Booking{
         $email = mysqli_real_escape_string($conn,($_POST['email']));
         $phone = mysqli_real_escape_string($conn,($_POST['phone']));
         /* Reservation information */
-        $car = mysqli_real_escape_string($conn,($_POST['car']));
-        $timestart = mysqli_real_escape_string($conn,($_POST['timestart']));
-        $timeend = mysqli_real_escape_string($conn,($_POST['timeend']));
+        $car = mysqli_real_escape_string($conn,($_POST['carlist']));
+        $startTime = mysqli_real_escape_string($conn,($_POST['startTime']));
+        $endTime = mysqli_real_escape_string($conn,($_POST['endTime']));
         $status = "Pending";
 
         /* Check that main fields are filled with values */
@@ -51,12 +51,12 @@ class Booking{
 
             /* Insert data into database, assign status pending */
             $sql = "INSERT INTO `reservations` (`id`, `name`, `email`, `phone`, `car`,"
-                    . " `timestart`, `timeend`, `status`) VALUES ('', '$name', "
-                        . "'$email', '$phone', '$car', '$timestart', '$timeend', '$status');";
+                    . " `starttime`, `endtime`, `status`) VALUES ('', '$name', "
+                        . "'$email', '$phone', '$car', '$startTime', '$endTime', '$status');";
             $result = mysqli_query($conn, $sql);
-
+            print_r($result);
             /* If reservation booking is successful, return user to booking.php and prompt success pop-up */
-            header('Location: index.php?usercreated=true');
+            /* header('Location: index.php?usercreated=true'); */
         }
     
     }   /* End bookReservation() */
