@@ -2,7 +2,7 @@
     text-align: center;
 }
 .booking-form {
-  max-width: 350px;
+  max-width: 300px;
   margin: 0 auto;
   margin-top:15%;
   border: 1px solid transparent;
@@ -18,6 +18,7 @@
 }
 .booking-form .form-control {
   position: relative;
+  width: 250px;
   height: auto;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -38,13 +39,58 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.booking-form {
-    
+.navbar-brand {
+    margin-bottom: 5px;
 }
 .gray a{
     color: graytext;
 }
 h1, .h1, h2, .h2, h3, .h3 {
     margin-bottom: 20px; 
+}
+.btn-book { 
+  color: #FFFFFF; 
+  background-color: #04052E; 
+  border-color: #02010A; 
+} 
+ 
+.btn-book:hover, 
+.btn-book:focus, 
+.btn-book:active, 
+.btn-book.active, 
+.open .dropdown-toggle.btn-book { 
+  color: #FFFFFF; 
+  background-color: #140152; 
+  border-color: #02010A; 
+} 
+ 
+.btn-book:active, 
+.btn-book.active, 
+.open .dropdown-toggle.btn-book { 
+  background-image: none; 
+} 
+ 
+.btn-book.disabled, 
+.btn-book[disabled], 
+fieldset[disabled] .btn-book, 
+.btn-book.disabled:hover, 
+.btn-book[disabled]:hover, 
+fieldset[disabled] .btn-book:hover, 
+.btn-book.disabled:focus, 
+.btn-book[disabled]:focus, 
+fieldset[disabled] .btn-book:focus, 
+.btn-book.disabled:active, 
+.btn-book[disabled]:active, 
+fieldset[disabled] .btn-book:active, 
+.btn-book.disabled.active, 
+.btn-book[disabled].active, 
+fieldset[disabled] .btn-book.active { 
+  background-color: #04052E; 
+  border-color: #02010A; 
+} 
+ 
+.btn-book .badge { 
+  color: #04052E; 
+  background-color: #FFFFFF; 
 }
 
