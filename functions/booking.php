@@ -41,21 +41,19 @@ class Booking{
         $email = mysqli_real_escape_string($conn,($_POST['email']));
         $phone = mysqli_real_escape_string($conn,($_POST['phone']));
         /* Reservation information */
-        $arrival = mysqli_real_escape_string($conn,trim($_POST['arrival']));
-        $departure = mysqli_real_escape_string($conn,trim($_POST['departure']));
-        $room = mysqli_real_escape_string($conn,trim($_POST['room']));
-        $adults = mysqli_real_escape_string($conn,trim($_POST['adults']));
-        $children = mysqli_real_escape_string($conn,trim($_POST['children']));
+        $car = mysqli_real_escape_string($conn,($_POST['car']));
+        $timestart = mysqli_real_escape_string($conn,($_POST['timestart']));
+        $timeend = mysqli_real_escape_string($conn,($_POST['timeend']));
         $status = "Pending";
 
         /* Check that main fields are filled with values */
         if(!empty($name) && !empty($email) && !empty($phone)){
 
             /* Insert data into database, assign status pending */
-            $sql = "INSERT INTO `reservations` (`id`, `name`, `email`, `phone`, `arrival`, `departure`,"
-                    . " `room`, `adults`, `children`, `status`) VALUES ('', '$name', "
-                        . "'$email', '$phone', '$arrival', '$departure', '$room', '$adults', '$children', '$status');";
-                    $result = mysqli_query($conn, $sql);
+            $sql = "INSERT INTO `reservations` (`id`, `name`, `email`, `phone`, `car`,"
+                    . " `timestart`, `timeend`, `status`) VALUES ('', '$name', "
+                        . "'$email', '$phone', '$car', '$timestart', '$timeend', '$status');";
+            $result = mysqli_query($conn, $sql);
 
             /* If reservation booking is successful, return user to booking.php and prompt success pop-up */
             header('Location: index.php?usercreated=true');
