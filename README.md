@@ -1,5 +1,7 @@
 # PHP car booking system
 Fully implemented PHP car booking system with admin console, vehicle management, reservation management. 
+## On HOLD
+As my university academic session is starting, I won't be able to update my projects as often as I would like to.
 ## Screenshot
 ![Login Form](http://i.imgur.com/TxyQJRr.png)
 
